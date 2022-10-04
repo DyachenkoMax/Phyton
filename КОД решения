@@ -1,7 +1,7 @@
 using System;
 class HelloWorld {
   static void Main() {
-            string[] MassivStrok;
+            string[] massivStrok;
             Console.WriteLine("Введите массив строк через пробел");
             string stroka = Console.ReadLine();
             massivStrok = stroka.Split(' '); //разбить через пробел
