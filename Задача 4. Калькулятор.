@@ -36,7 +36,7 @@ try:
         print(f' {numberOne} {operation} {numberTwo} = {numberOne // numberTwo}  ')
         if numberTwo == 0:
             print("Деление на 0!")
-    else:
+    if operation != '+' and operation != '-' and operation != '*' and operation != '/' and operation != 'mod' and operation != 'pow' and operation != 'mod' and operation != 'div' :
         print(" наш калькулятор понимает только команды +, -, /, *, mod, pow, div. Введите одну из них ")
 except:
     print('Цифры можно вводить только цифрами. а операции только: +, -, /, *, mod, pow, div  ')
