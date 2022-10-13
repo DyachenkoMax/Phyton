@@ -1,0 +1,47 @@
+Задайте двумерный массив из целых чисел. Количество строк и столбцов задается с клавиатуры. Отсортировать элементы по возрастанию слева направо и сверху вниз.
+
+from random import randint
+
+a = int(input("Введите количество строк таблицы "))
+b = int(input("Введите количество столбцов таблицы "))
+
+def getRandIntTable(rowsCount, cellsCount):
+    result = []
+    
+    for i in range(0, rowsCount, 1):
+        rows = []
+        
+        for j in range(0, cellsCount, 1):
+            rows.append(randint(0, 100))
+            
+        result.append(rows)
+        
+    return result
+
+def getSortedTable(table):
+    result = []
+    allElementArray = []
+    
+    for row in table:
+        allElementArray += row
+        
+    allElementArray.sort()
+
+    for row in table:
+        result.append(allElementArray[0: len(row)])
+        allElementArray = allElementArray[len(row): len(allElementArray)]
+        
+    return result
+    
+def print_matrix(mas2d):
+    for i in range(len(mas2d)):
+        for j in range(len(mas2d[i])):
+            print(mas2d[i][j], end = ' ')
+        print()
+
+print()
+print("Случайная таблица нужных параметров:")
+print_matrix(getRandIntTable(a,b))
+print()
+print("Отсортированная таблица нужных параметров:")
+print_matrix(getSortedTable(getRandIntTable(a,b)))
