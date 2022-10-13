@@ -1,15 +1,10 @@
 try:
-    coordinateX = int(input('Введите координату X = '))
-    coordinateY = int(input('Введите координату Y = '))
-    if coordinateX > 0 and coordinateY > 0:
-        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в I-ой четверти ')
-    elif coordinateX < 0 and coordinateY > 0:
-        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит во II-ой четверти ')
-    elif coordinateX < 0 and coordinateY < 0:
-        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в III-ей четверти ')
-    elif coordinateX > 0 and coordinateY < 0:
-        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в IV-ой четверти ')
+    predicateX = int(input('Введите предикату X '))
+    predicateY = int(input('Введите предикату Y '))
+    predicateZ = int(input('Введите предикату Z '))
+    if 0 <= predicateX <= 1 and 0 <= predicateY <= 1 and 0 <= predicateZ <= 1:
+        print('утверждение истинно ')
     else:
-        print('Значения координат должны быть отличны от 0 ')
+        print('значения предикат должны быть 0 или 1 ')
 except:
-    print('Вводите координаты цифрами ')
+    print('Программа будет работать только при вводе цифр цифрами ')
