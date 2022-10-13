@@ -1,0 +1,15 @@
+try:
+    coordinateX = int(input('Введите координату X = '))
+    coordinateY = int(input('Введите координату Y = '))
+    if coordinateX > 0 and coordinateY > 0:
+        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в I-ой четверти ')
+    elif coordinateX < 0 and coordinateY > 0:
+        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит во II-ой четверти ')
+    elif coordinateX < 0 and coordinateY < 0:
+        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в III-ей четверти ')
+    elif coordinateX > 0 and coordinateY < 0:
+        print(f' точка с координатами = ({coordinateX};{coordinateY}) лежит в IV-ой четверти ')
+    else:
+        print('Значения координат должны быть отличны от 0 ')
+except:
+    print('Вводите координаты цифрами ')
