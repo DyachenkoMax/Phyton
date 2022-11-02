@@ -1,0 +1,26 @@
+# Задайте список из вещественных чисел. Напишите программу,
+# которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+from random import randint
+import random
+
+n = int(input("Введите количество элементов строки "))
+str = []
+sum = 0
+max = 0
+min = 1
+a = 0
+for i in range(n):
+    sum = (random.random())+(randint(0,10))
+    str.append(round(sum, 3))
+print(f' сгенерированная строка случайных вещественных чисел - {str} ')
+
+for i in range(n):
+    a = round(str[i] % 1, 3)
+    if max < a:
+        max = a
+    if a < min:
+        min = a
+
+print(f' максимальная дробная часть =  {max} ')
+print(f' минимальная дробная часть =  {min} ')
+print(f' искомая разница минимальной и максимальной части = {max-min} ')
